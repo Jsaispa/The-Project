@@ -1,0 +1,12 @@
+<strong><bl>All users last messages.</bl><br /></strong>
+
+<strong>Utilisateur courant : <%= current_user.login %><br /><br />
+
+<ul>
+  <% @messages.each{|message| %>
+      <fieldset><legend><strong>Message du <%= message.created_at %> depuis <%= message.user_agent %> par <%= link_to message.user.login, user = User.find_by_name(message.user.login)
+ %></legend></strong>
+      <%= message.body %></fieldset><br>
+  <% } %>
+  <%= will_paginate @messages %>
+</ul>

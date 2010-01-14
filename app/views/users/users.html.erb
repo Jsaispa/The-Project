@@ -1,0 +1,11 @@
+
+
+<ul>
+  <% @message.each{|message| %>
+    <li>
+      Message du <%= message.created_at %> :<br>
+      <%= message.body %><br><br>
+    </li>
+  <% } %>
+  <%= will_paginate @message %>
+</ul>

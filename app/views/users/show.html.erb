@@ -1,0 +1,9 @@
+<strong>login : <%= @user.login %></strong>
+
+<ul>
+  <% @messages.each{|message| %>
+      <fieldset><legend><strong>Message du <%= message.created_at %></legend></strong>
+      <%= message.body %></fieldset><br>
+  <% } %>
+  <%= will_paginate @messages %>
+</ul>

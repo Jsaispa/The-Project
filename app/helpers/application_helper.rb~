@@ -1,3 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+
+#   def useragent()
+#     request.env["HTTP_USER_AGENT"].split(" ").first
+#   end
 end
